@@ -4,7 +4,8 @@
       "Skill(stitch-design)",
       "Skill(stitch-design:*)",
       "Skill(stitch-loop)",
-      "Skill(stitch-loop:*)"
+      "Skill(stitch-loop:*)",
+      "Bash(powershell -Command \"\\(Get-Content 'C:\\\\Users\\\\Théo\\\\Serena\\\\index.html'\\) -replace '<span class=\\\\\"section-label\\\\\">[^<]+</span>\\\\r?\\\\n', '' | Set-Content 'C:\\\\Users\\\\Théo\\\\Serena\\\\index.html'\")"
     ]
   }
 }

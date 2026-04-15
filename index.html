@@ -478,6 +478,33 @@
       gap: 80px;
       align-items: center;
     }
+    .origin__photo {
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: var(--shadow-xl);
+      transform: rotate(-1deg);
+      transition: transform .4s var(--trans);
+      max-width: 420px;
+      margin: 0 auto;
+      background: var(--surface);
+    }
+    .origin__photo:hover { transform: rotate(0deg) scale(1.01); }
+    .origin__photo img {
+      width: 100%;
+      height: auto;
+      display: block;
+      aspect-ratio: 3 / 4;
+      object-fit: cover;
+    }
+    .origin__photo figcaption {
+      text-align: center;
+      font-size: .78rem;
+      color: var(--muted);
+      padding: 10px 16px 12px;
+      font-style: italic;
+      background: var(--surface);
+    }
+
     .origin__text h2 { margin-bottom: 28px; }
     .origin__text p {
       color: var(--muted);
@@ -1364,53 +1391,31 @@
       <div class="container">
         <div class="origin__grid">
           <div class="origin__text reveal-left">
-            <span class="section-label">Notre histoire</span>
             <h2 id="origin-heading">Tout a commencé avec un mot sur un mur</h2>
             <p>
-              Il y a quelques mois, une sage-femme nous a montré un post-it
-              glissé sous sa porte. <em>"Merci d'avoir répondu à 23h. J'avais peur."</em>
+              Un jour, dans la salle d'attente d'un cabinet, j'ai vu ce message
+              manuscrit affiché à l'entrée. Une sage-femme qui expliquait à ses
+              patientes qu'elle n'en pouvait plus — les SMS, les emails,
+              les questions à toute heure, hors consultation.
             </p>
             <blockquote>
-              "Je ne veux pas que mes patientes aient peur dans le silence de
-              la nuit. Mais je ne peux pas non plus être disponible à toute
-              heure — j'ai moi aussi besoin de me reposer."
+              Et si il existait une solution pour ces heures données
+              en dehors des consultations&nbsp;?
             </blockquote>
-            <p>
-              C'est là que Serena est née. Pas d'une idée abstraite, mais d'un
-              besoin concret&nbsp;: permettre aux sages-femmes d'exercer avec
-              sérénité, sans jamais laisser une patiente sans réponse.
-            </p>
-            <p>
-              Serena n'est pas un chatbot générique. C'est une assistante formée
-              à <em>ta</em> façon de travailler, à <em>tes</em> protocoles,
-              à <em>ta</em> voix.
-            </p>
+            <p>Serena est née de ce moment.</p>
           </div>
           <div class="origin__visual reveal-right">
-            <div class="note-card" role="img" aria-label="Note manuscrite d'une patiente">
-              <div class="note-card__ruling" aria-hidden="true">
-                <div class="note-card__rule"></div>
-                <div class="note-card__rule"></div>
-                <div class="note-card__rule"></div>
-                <div class="note-card__rule"></div>
-                <div class="note-card__rule"></div>
-                <div class="note-card__rule"></div>
-              </div>
-              <div class="note-card__handwriting" aria-hidden="true">
-                <span>Merci d'avoir répondu</span>
-                <span>à 23h. J'avais peur.</span>
-                <span class="sig">— Amina, 36 semaines</span>
-              </div>
-            </div>
-            <div class="float-chip" aria-hidden="true">
-              <div class="float-chip__icon">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
-              </div>
-              <div class="float-chip__text">
-                <strong>Serena a répondu</strong>
-                <span>il y a 2 min · 22:47</span>
-              </div>
-            </div>
+            <figure class="origin__photo">
+              <img
+                src="note.jpg.png"
+                alt="Message manuscrit d'une sage-femme affiché en salle d'attente, expliquant à ses patientes qu'elle n'est plus en mesure de répondre aux SMS et emails quotidiens"
+                width="480"
+                height="620"
+                loading="lazy"
+                decoding="async"
+              />
+              <figcaption>Message en salle d'attente d'une sage-femme libérale</figcaption>
+            </figure>
           </div>
         </div>
       </div>
@@ -1424,7 +1429,6 @@
     <section class="how" id="how" aria-labelledby="how-heading">
       <div class="container">
         <div class="how__header reveal">
-          <span class="section-label">Mise en place en 20 minutes</span>
           <h2 id="how-heading">Comment ça fonctionne</h2>
           <p class="muted" style="margin-top:12px; max-width:480px; margin-left:auto; margin-right:auto;">
             Simple, humain, et taillé pour les indépendants.
@@ -1477,7 +1481,6 @@
     <section class="patient" aria-labelledby="patient-heading">
       <div class="container">
         <div class="patient__header reveal">
-          <span class="section-label">Conversations réelles</span>
           <h2 id="patient-heading">Ce que vos patientes vivent</h2>
           <p class="muted" style="margin-top:10px;">Serena répond avec calme, bienveillance, et les bons mots.</p>
         </div>
@@ -1630,7 +1633,6 @@
     <section class="benefits" id="benefits" aria-labelledby="benefits-heading">
       <div class="container">
         <div class="benefits__header reveal">
-          <span class="section-label">Pour toi, sage-femme</span>
           <h2 id="benefits-heading">Ce que ça change pour toi</h2>
         </div>
         <div class="benefits__grid">
@@ -1727,7 +1729,6 @@
     <section class="trust" id="trust" aria-labelledby="trust-heading">
       <div class="container">
         <div class="trust__header reveal">
-          <span class="section-label">Éthique &amp; conformité</span>
           <h2 id="trust-heading">Conçu avec soin, protégé avec rigueur</h2>
           <p>Parce que la confiance de tes patientes ne se négocie pas.</p>
         </div>
@@ -1777,79 +1778,12 @@
     <section class="waitlist" id="waitlist" aria-labelledby="waitlist-heading">
       <div class="container">
         <div class="waitlist__header reveal">
-          <span class="section-label">Accès anticipé</span>
           <h2 id="waitlist-heading">Sois parmi les premières à l'essayer</h2>
           <p>50 places disponibles pour les sages-femmes pionnières. Gratuit pendant la phase bêta.</p>
         </div>
         <div class="waitlist__card reveal reveal-delay-1">
-          <div class="waitlist__logo" aria-hidden="true">
-            <div class="waitlist__logo-icon">
-              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
-            </div>
-            Serena
-          </div>
-          <form id="waitlist-form" novalidate aria-label="Formulaire d'inscription à la liste d'attente">
-            <div class="form-grid">
-
-              <div class="form-group" id="group-nom">
-                <label for="nom">Nom complet <span aria-hidden="true" style="color:var(--accent)">*</span></label>
-                <input type="text" id="nom" name="nom" placeholder="Marie Dupont" autocomplete="name" aria-required="true" />
-                <span class="form-error" role="alert" id="error-nom">Merci d'indiquer ton nom complet.</span>
-              </div>
-
-              <div class="form-group" id="group-ville">
-                <label for="ville">Ville d'exercice <span aria-hidden="true" style="color:var(--accent)">*</span></label>
-                <input type="text" id="ville" name="ville" placeholder="Lyon, Paris…" autocomplete="address-level2" aria-required="true" />
-                <span class="form-error" role="alert" id="error-ville">Merci d'indiquer ta ville.</span>
-              </div>
-
-              <div class="form-group" id="group-email">
-                <label for="email">Email professionnel <span aria-hidden="true" style="color:var(--accent)">*</span></label>
-                <input type="email" id="email" name="email" placeholder="marie@cabinet.fr" autocomplete="email" aria-required="true" aria-describedby="error-email" />
-                <span class="form-error" role="alert" id="error-email">Merci d'entrer un email valide.</span>
-              </div>
-
-              <div class="form-group" id="group-tel">
-                <label for="tel">Téléphone professionnel</label>
-                <input type="tel" id="tel" name="tel" placeholder="+33 6 00 00 00 00" autocomplete="tel" />
-              </div>
-
-              <div class="form-group full" id="group-perso">
-                <label for="perso">Souhaitez-vous personnaliser les messages&nbsp;?</label>
-                <div class="select-wrap">
-                  <select id="perso" name="perso" aria-label="Préférence de personnalisation">
-                    <option value="">Choisir une option…</option>
-                    <option value="oui">Oui, j'aimerais adapter le ton</option>
-                    <option value="non">Non, les messages par défaut me conviennent</option>
-                    <option value="plus">Je veux en savoir plus d'abord</option>
-                  </select>
-                </div>
-              </div>
-
-              <div class="form-group full">
-                <label>Intéressé·e par un partenariat&nbsp;?</label>
-                <div class="radio-group" role="radiogroup" aria-label="Intérêt pour un partenariat">
-                  <label class="radio-option">
-                    <input type="radio" name="partenariat" value="oui" />
-                    <div class="radio-custom" aria-hidden="true"></div>
-                    Oui
-                  </label>
-                  <label class="radio-option">
-                    <input type="radio" name="partenariat" value="non" />
-                    <div class="radio-custom" aria-hidden="true"></div>
-                    Non
-                  </label>
-                </div>
-              </div>
-
-            </div>
-            <button type="submit" class="btn btn-primary waitlist__submit">
-              Envoyer ma candidature
-            </button>
-          </form>
-          <p class="waitlist__tally">
-            Formulaire sécurisé · <a href="#" aria-label="Créer un formulaire avec Tally (ouvre une nouvelle page)">Créer avec Tally ↗</a>
-          </p>
+          <iframe data-tally-src="https://tally.so/embed/0Qvpy9?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1" loading="lazy" width="100%" height="1077" frameborder="0" marginheight="0" marginwidth="0" title="Rejoindre la liste d'attente Serena"></iframe>
+          <script>var d=document,w="https://tally.so/widgets/embed.js",v=function(){"undefined"!=typeof Tally?Tally.loadEmbeds():d.querySelectorAll("iframe[data-tally-src]:not([src])").forEach((function(e){e.src=e.dataset.tallySrc}))};if("undefined"!=typeof Tally)v();else if(d.querySelector('script[src="'+w+'"]')==null){var s=d.createElement("script");s.src=w,s.onload=v,s.onerror=v,d.body.appendChild(s);}</script>
         </div>
       </div>
     </section>

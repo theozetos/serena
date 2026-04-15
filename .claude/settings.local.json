@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Skill(stitch-design)",
+      "Skill(stitch-design:*)",
+      "Skill(stitch-loop)",
+      "Skill(stitch-loop:*)"
+    ]
+  }
+}
